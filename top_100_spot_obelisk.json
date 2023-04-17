@@ -1,0 +1,108 @@
+
+{
+    "max_open_trades": 20,
+    "stake_currency": "USDT",
+    "stake_amount": "unlimited",
+    "tradable_balance_ratio": 0.99,
+    "fiat_display_currency": "USD",
+    "dry_run": true,
+    "dry_run_wallet": 10000,
+    "cancel_open_orders_on_exit": false,
+    "trading_mode": "spot",
+    "margin_mode": "isolated",
+    "ignore_buying_expired_candle_after": 900,
+    "unfilledtimeout": {
+        "entry": 10,
+        "exit": 10,
+        "exit_timeout_count": 0,
+        "unit": "minutes"
+    },
+    "entry_pricing": {
+        "price_side": "other",
+        "use_order_book": true,
+        "order_book_top": 1,
+        "price_last_balance": 0.0,
+        "check_depth_of_market": {
+            "enabled": false,
+            "bids_to_ask_delta": 1
+        }
+    },
+    "exit_pricing":{
+        "price_side": "other",
+        "use_order_book": true,
+        "order_book_top": 1
+    },
+    "exchange": {
+        "name": "binance",
+        "key": "",
+        "secret": "",
+        "ccxt_config": {},
+        "ccxt_async_config": {},
+        "pair_whitelist": ["ETH/USDT", "BTC/USDT", "DOGE/USDT", "BNB/USDT", "XRP/USDT",
+            "BUSD/USDT", "ADA/USDT", "MATIC/USDT", "DOT/USDT", "TRX/USDT", "LTC/USDT", "SHIB/USDT",
+            "SOL/USDT", "UNI/USDT", "AVAX/USDT", "LPT/USDT", "LINK/USDT", "XMR/USDT", "ATOM/USDT",
+            "ETC/USDT", "BCH/USDT", "XLM/USDT", "APE/USDT", "QNT/USDT", "ALGO/USDT", "VET/USDT", "NEAR/USDT",
+            "HBAR/USDT", "ICP/USDT", "FIL/USDT", "EOS/USDT", "LUNC/USDT", "EGLD/USDT",
+            "FLOW/USDT", "THETA/USDT", "AAVE/USDT", "XTZ/USDT",
+            "AXS/USDT", "CHZ/USDT", "SAND/USDT", "ZEC/USDT", "MANA/USDT",
+            "TWT/USDT", "BTTC/USDT", "FTM/USDT", "CAKE/USDT", "MKR/USDT", "GRT/USDT",
+            "KLAY/USDT", "PAXG/USDT", "DASH/USDT", "APT/USDT", "IOTA/USDT", "XEC/USDT",
+            "RUNE/USDT", "NEO/USDT", "GMX/USDT", "SNX/USDT", "OSMO/USDT", "NEXO/USDT",
+            "FXS/USDT", "STX/USDT", "IMX/USDT", "FTT/USDT", "1INCH/USDT",
+            "LDO/USDT", "ZIL/USDT", "BAT/USDT", "DCR/USDT", "CRV/USDT", "LRC/USDT",
+            "XEM/USDT", "ENJ/USDT",
+            "HOT/USDT", "KAVA/USDT",
+            "KSM/USDT", "SUSHI/USDT", "QTUM/USDT",
+            "IOTX/USDT", "JST/USDT", "RVN/USDT",
+            "MASK/USDT"
+        ],
+        "pair_blacklist": [""
+        ]
+    },
+
+    "pairlists": [
+        {
+            "method": "StaticPairList",
+            "number_assets": 101,
+            "sort_key": "quoteVolume",
+            "min_value": 0
+        }
+    ],
+    "edge": {
+        "enabled": false,
+        "process_throttle_secs": 3600,
+        "calculate_since_number_of_days": 7,
+        "allowed_risk": 0.01,
+        "stoploss_range_min": -0.01,
+        "stoploss_range_max": -0.1,
+        "stoploss_range_step": -0.01,
+        "minimum_winrate": 0.60,
+        "minimum_expectancy": 0.20,
+        "min_trade_number": 10,
+        "max_trade_duration_minute": 1440,
+        "remove_pumps": false
+    },
+    "telegram": {
+        "enabled": false,
+        "token": "",
+        "chat_id": ""
+    },
+     "api_server": {
+        "enabled": true,
+        "listen_ip_address": "0.0.0.0",
+        "listen_port": 8080,
+        "verbosity": "error",
+        "enable_openapi": false,
+        "jwt_secret_key": "2324eb55c97423af2b3f0ba64135b6703b9419a948c52ec83b58e2ea52cac589",
+        "ws_token": "IERT7QiKhOeOBOOdw982eQLLc9U61OzJUQ",
+        "CORS_origins": ["http://128.199.37.95"],
+        "username": "top100spot",
+        "password": "top100spotstrategy"
+    },
+    "bot_name": "freqtrade",
+    "initial_state": "running",
+    "force_entry_enable": false,
+    "internals": {
+        "process_throttle_secs": 20
+    }
+}

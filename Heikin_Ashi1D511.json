@@ -1,0 +1,100 @@
+
+{
+    "max_open_trades": 10,
+    "stake_currency": "USDT",
+    "stake_amount": "unlimited",
+    "tradable_balance_ratio": 0.99,
+    "fiat_display_currency": "USD",
+    "dry_run": true,
+    "dry_run_wallet": 100000,
+    "cancel_open_orders_on_exit": false,
+    "trading_mode": "futures",
+    "margin_mode": "isolated",
+    "ignore_buying_expired_candle_after": 300,
+    "unfilledtimeout": {
+        "entry": 10,
+        "exit": 10,
+        "exit_timeout_count": 0,
+        "unit": "minutes"
+    },
+    "entry_pricing": {
+        "price_side": "other",
+        "use_order_book": true,
+        "order_book_top": 1,
+        "price_last_balance": 0.0,
+        "check_depth_of_market": {
+            "enabled": false,
+            "bids_to_ask_delta": 1
+        }
+    },
+    "exit_pricing":{
+        "price_side": "other",
+        "use_order_book": true,
+        "order_book_top": 1
+    },
+    "exchange": {
+        "name": "binance",
+        "key": "",
+        "secret": "",
+        "ccxt_config": {},
+        "ccxt_async_config": {},
+        "pair_whitelist": ["ETH/USDT", "BTC/USDT", "DOGE/USDT", "LTC/USDT", "APE/USDT", "BNB/USDT", "MASK/USDT",
+            "XRP/USDT", "REN/USDT", "LINK/USDT", "SOL/USDT", "CELO/USDT", "MATIC/USDT", "BAND/USDT",
+            "CRV/USDT", "CHZ/USDT", "ETC/USDT", "1000SHIB/USDT", "DYDX/USDT", "SUSHI/USDT", "ADA/USDT",
+            "FIL/USDT", "DOT/USDT", "NEAR/USDT", "AVAX/USDT", "AAVE/USDT", "PEOPLE/USDT", "GMT/USDT", "SAND/USDT",
+            "ATOM/USDT", "EOS/USDT", "BCH/USDT", "TRX/USDT", "ALGO/USDT", "RLC/USDT",
+            "THETA/USDT", "FTM/USDT", "UNI/USDT", "BNX/USDT",
+            "TRB/USDT", "GRT/USDT", "BAL/USDT", "GAL/USDT", "BTCUSDT_221230",
+            "ZEC/USDT", "1000LUNC/USDT", "OP/USDT", "YFI/USDT", "DASH/USDT", "SFP/USDT"
+        ],
+        "pair_blacklist": [""
+        ]
+    },
+
+    "pairlists": [
+        {
+            "method": "StaticPairList",
+            "number_assets": 51,
+            "sort_key": "quoteVolume",
+            "min_value": 0,
+            "refresh_period": 1800
+        }
+    ],
+    "edge": {
+        "enabled": false,
+        "process_throttle_secs": 3600,
+        "calculate_since_number_of_days": 7,
+        "allowed_risk": 0.01,
+        "stoploss_range_min": -0.01,
+        "stoploss_range_max": -0.1,
+        "stoploss_range_step": -0.01,
+        "minimum_winrate": 0.60,
+        "minimum_expectancy": 0.20,
+        "min_trade_number": 10,
+        "max_trade_duration_minute": 1440,
+        "remove_pumps": false
+    },
+    "telegram": {
+        "enabled": false,
+        "token": "",
+        "chat_id": ""
+    },
+    "api_server": {
+        "enabled": true,
+        "listen_ip_address": "0.0.0.0",
+        "listen_port": 8091,
+        "verbosity": "error",
+        "enable_openapi": false,
+        "jwt_secret_key": "a93a2b758a0e4784b6bfa0a202f97d6ccdbbed6e06f11904f8a2ea2d2b6a8d7e",
+        "ws_token": "EjlRnakvm8IyN-d5F9-56jS3mX3ZBqXvPw",
+        "CORS_origins": [],
+        "username": "Haikin_Ashi",
+        "password": "Haikin_Ashi"
+    },
+    "bot_name": "freqtrade",
+    "initial_state": "running",
+    "force_entry_enable": false,
+    "internals": {
+        "process_throttle_secs": 12
+    }
+}
